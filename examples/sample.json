@@ -1,8 +1,8 @@
 [
   {
-    "id": "190538b3.b6e777",
+    "id": "24ea1513.9ca71a",
     "type": "inject",
-    "z": "35eb4fe1.2e866",
+    "z": "3ecb0d67.f0e6b2",
     "name": "",
     "props": [
       {
@@ -20,18 +20,32 @@
     "topic": "",
     "payload": "",
     "payloadType": "date",
-    "x": 150,
-    "y": 80,
+    "x": 130,
+    "y": 100,
     "wires": [
       [
-        "a8108bad.558cd8"
+        "a9210a36.5ca928"
       ]
     ]
   },
   {
-    "id": "7780bf0c.34d65",
+    "id": "a9210a36.5ca928",
+    "type": "pdfparse",
+    "z": "3ecb0d67.f0e6b2",
+    "name": "",
+    "path": "C:\\Users\\user\\Downloads\\20200929-EB-5_Event_Streaming_Use_Cases_That_Transform_Business.pdf",
+    "x": 290,
+    "y": 100,
+    "wires": [
+      [
+        "393c0a75.e2b926"
+      ]
+    ]
+  },
+  {
+    "id": "393c0a75.e2b926",
     "type": "debug",
-    "z": "35eb4fe1.2e866",
+    "z": "3ecb0d67.f0e6b2",
     "name": "",
     "active": true,
     "tosidebar": true,
@@ -40,40 +54,8 @@
     "complete": "false",
     "statusVal": "",
     "statusType": "auto",
-    "x": 650,
-    "y": 80,
+    "x": 470,
+    "y": 100,
     "wires": []
-  },
-  {
-    "id": "6c4e4ef1.7e5f2",
-    "type": "pdfparse",
-    "z": "35eb4fe1.2e866",
-    "name": "",
-    "path": "",
-    "x": 480,
-    "y": 80,
-    "wires": [
-      [
-        "7780bf0c.34d65"
-      ]
-    ]
-  },
-  {
-    "id": "a8108bad.558cd8",
-    "type": "function",
-    "z": "35eb4fe1.2e866",
-    "name": "",
-    "func": "// msg.func = 'reviews';\n\n// msg.func = 'app';\n// msg.path = 'com.google.android.apps.translate'\n\n// msg.func = 'search';\n// msg.term = \"chaca\";\n// msg.num =  2\n\n// msg.func = 'developer';\n// msg.devId = \"Cakeplabs\";\n\n// msg.func = 'suggest';\n// msg.term = \"panda\";\n\n// msg.func = 'categories';\n\nmsg.func = 'permissions';\nmsg.path = 'com.google.android.apps.translate'\n\nreturn msg;",
-    "outputs": 1,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "x": 300,
-    "y": 80,
-    "wires": [
-      [
-        "6c4e4ef1.7e5f2"
-      ]
-    ]
   }
 ]
