@@ -17,4 +17,5 @@ command in your Node-RED user directory, typically `~/.node-red`
 Node.js module to scrape application data from the Google Play store
 - https://www.npmjs.com/package/pdf-parse
 
-
+## Samples
+[sample.json](examples/sample.json)
