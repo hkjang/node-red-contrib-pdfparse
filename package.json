@@ -1,0 +1,33 @@
+{
+  "name": "node-red-contrib-pdfparse",
+  "version": "1.0.2",
+  "description": "Node-RED node for pdfparse",
+  "main": "node.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\" --timeout 3000"
+  },
+  "node-red": {
+    "nodes": {
+      "pdfparse": "node.js"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/hkjang/node-red-contrib-pdfparse/issues"
+  },
+  "homepage": "https://github.com/hkjang/node-red-contrib-pdfparse#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkjang/node-red-contrib-pdfparse.git"
+  },
+  "keywords": [
+    "node-red-contrib-contribgen", 
+    "node-red", 
+    "pdfparse",
+    "pdf-parse"
+
+  ],
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  },
+  "license": "MIT"
+}

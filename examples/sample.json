@@ -1,0 +1,79 @@
+[
+  {
+    "id": "190538b3.b6e777",
+    "type": "inject",
+    "z": "35eb4fe1.2e866",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 80,
+    "wires": [
+      [
+        "a8108bad.558cd8"
+      ]
+    ]
+  },
+  {
+    "id": "7780bf0c.34d65",
+    "type": "debug",
+    "z": "35eb4fe1.2e866",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 650,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "6c4e4ef1.7e5f2",
+    "type": "pdfparse",
+    "z": "35eb4fe1.2e866",
+    "name": "",
+    "path": "",
+    "x": 480,
+    "y": 80,
+    "wires": [
+      [
+        "7780bf0c.34d65"
+      ]
+    ]
+  },
+  {
+    "id": "a8108bad.558cd8",
+    "type": "function",
+    "z": "35eb4fe1.2e866",
+    "name": "",
+    "func": "// msg.func = 'reviews';\n\n// msg.func = 'app';\n// msg.path = 'com.google.android.apps.translate'\n\n// msg.func = 'search';\n// msg.term = \"chaca\";\n// msg.num =  2\n\n// msg.func = 'developer';\n// msg.devId = \"Cakeplabs\";\n\n// msg.func = 'suggest';\n// msg.term = \"panda\";\n\n// msg.func = 'categories';\n\nmsg.func = 'permissions';\nmsg.path = 'com.google.android.apps.translate'\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 300,
+    "y": 80,
+    "wires": [
+      [
+        "6c4e4ef1.7e5f2"
+      ]
+    ]
+  }
+]
