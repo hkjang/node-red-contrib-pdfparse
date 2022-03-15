@@ -14,7 +14,7 @@ command in your Node-RED user directory, typically `~/.node-red`
     npm install node-red-contrib-pdfparse
 
 ## wrapper pdfparse
-Node.js module to scrape application data from the Google Play store
+Node.js module to parse pdf
 - https://www.npmjs.com/package/pdf-parse
 
 ## Samples
